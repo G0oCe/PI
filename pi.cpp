@@ -26,6 +26,8 @@ int main() {
     cpp_dec_float_100 result = (2 * sqrt(2) / 9801) * sum;
     result = 1 / result;
 
+    std::cout << "PI = " << boost::math::constants::pi<cpp_dec_float_100>() << "  Boost library\n";
+    std::cout << "PI = " << result << "  Ramanujan\n";
 
     return 0;
 }
