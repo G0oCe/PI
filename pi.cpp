@@ -13,3 +13,19 @@ cpp_dec_float_100 boost_factorial(int n) {
     return result;
 }
 
+int main() {
+    cpp_dec_float_100 sum = 0;
+
+    for (int k = 0; k < 190; ++k) {
+        cpp_dec_float_100 numerator = boost_factorial(4 * k) * (1103 + 26390 * k);
+        cpp_dec_float_100 denominator = pow(boost_factorial(k), 4) * pow(396, 4 * k);
+
+        sum += numerator / denominator;
+    }
+
+    cpp_dec_float_100 result = (2 * sqrt(2) / 9801) * sum;
+    result = 1 / result;
+
+
+    return 0;
+}
